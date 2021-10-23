@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;     /* fix the all box size same in web page */ 
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #181818;
+    color: white;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 300;
+
+}
+#wrapper{
+    display: flex;
+    flex-direction: row;
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center; /* all content are align in center from all side*/
+    height: 100vh;            
+
+
+}
+
+
+#right{
+    flex: 1;
+
+}
+/* Signin */
+#signin{
+    display: flex;
+    flex-direction: column;   /* all item are in column */
+    justify-content: center;
+    align-items: center;
+    width: 80;
+    padding-bottom: 1rem;     /* padding from bottum */
+
+}
+#signin form{      /* form id inside the signin */
+    width: 80%;
+    padding-bottom: 3rem;     
+
+}
+
+#signin .logo{      /*  logo class inside the signin*/
+
+    margin-bottom: 8vh; 
+}
+
+#signin .logo img{
+    width: 70%;
+}
+
+#signin label{
+    font-size:0.9rem ;
+    line-height:2rem ;
+    font-weight: 500;
+
+}
+#signin .text-input{
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 5px;
+    background: #181818;
+    border: 1px solid red;
+    /*color: yellow;*/
+    padding: .05rem 1rem;
+    line-height: 1.3rem;     /* hieght of the input box*/
+}
+
+/* #signin .primary-btn{
+    width: 100%; */
+
+#signin .secondary-btn,
+.or,
+.links{
+    width: 60%;
+}
+
+/* Button */
+.primary-btn{
+    padding: 0.7rem 1rem;
+    height: 2rem;
+    display: block;
+    border: 1px;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: orange;
+    color:black;
+    cursor: pointer;           /* curser beccome pointer */
+    text-align: center;
+    transition: all 0.5s;
+    width: 100%;
+}
+.primary-btn:hover{
+    /*  the :hover selector is used to select elements when you mouse over  */
+    background-color: white;
+}
+
+#signin .link a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    
+    
+}
+
+#signin .or{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+
+}
+
+#signin .or .bar{
+    flex: auto;
+    border: none;
+    height: 1px;
+    background:#aaa;
+}
+
+#signin .or span{
+    color:seagreen;
+    padding: 0.0 0.8rem;
+}
+
+/* footer*/
+#main-footer {
+    color: #fff;
+    text-align: center;
+    font-size: medium;
+    max-width: 80%;
+    padding-top: 5rem;
+}
+
+#main-footer a{
+    color:lightcoral;
+}
+/* Media Queries */
+/* media queries is a feathure of css3 allowing content rending to adopt to different candition such as screen resolution.*/
+@media (min-width: 1200px){
+    #left{
+        flex: 4;
+    }
+    #right{
+        flex: 6;
+    }
+}
+
+
+/* showcase */
+#showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background:url('backg.jpg') no-repeat center center /cover;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+#showcase .showcase-text{
+    font-size: 3rem;
+    width: 90%;
+    color: orange;
+    margin-bottom: 1.5rem;
+}
+
+#showcase .secondary-btn{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: darksalmon;
+    transition:transform .2s;   /*zoomout */
+}
+
+#showcase .secondary-btn:hover{
+    transform: scale(1.2);  /* for zoom out the text */
+}
+
+.secondary-btn{
+    padding: 0.7rem 1rem;
+    height: 2rem;
+    display: block;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: none;
+    color:red;
+    cursor: pointer;           /* curser beccome pointer */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.secondary-btn:hover{
+    /*  the :hover selector is used to select elements when you mouse over  */
+    background-color: rgb(176, 247, 176);
+    
+}
+
+
+@media(max-width:768px){
+    body{
+        overflow:auto;
+    }
+    #right {
+        display: none;
+         }
+    #left {
+        justify-content: start;
+        margin-top: 2vh;
+        
+    }
+    #signin .logo{
+        margin-bottom: 2vh;
+    }
+    #signin .text-input{
+        margin-bottom: 0.7rem;
+    }
+    #main-footer{
+        padding-top: 1rem;
+    }
+}
+
+
+
